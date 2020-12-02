@@ -14,6 +14,8 @@ expense_report = [1975, 1600, 113, 1773, 1782, 1680, 1386, 1682, 1991, 1640, 176
                   1398, 1992, 1263, 1786, 1723, 1206, 1363, 1177, 1646, 1231, 1140, 1088, 1322]
 expense_report.sort()
 
+# part 1
+
 left = 0
 right = len(expense_report) - 1
 
@@ -31,8 +33,6 @@ while left < right:
 
 # part 2
 
-perm = permutations(expense_report, 3)
-
-for i in perm:
+for i in permutations(expense_report, 3):
     if sum(i) == 2020:
         print(i[0], i[1], i[2], i[0] * i[1] * i[2])
